@@ -1,0 +1,8 @@
+services:
+  privesc-ctf:
+    build:
+      context: ./challenge
+    container_name: privesc-ctf
+    ports:
+      - "2002:22"
+    restart: unless-stopped

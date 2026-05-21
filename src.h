@@ -71,11 +71,11 @@
 		Use this to obtain a root shell or directly modify group membership:
 
 		Option 1 – spawn a root shell, then add john to the sudo group
-		sudo find /home/ -exec /bin/sh ;
+		sudo find /home/ -exec /bin/sh \;
 		sudo usermod -aG sudo john
 
 		Option 2 – add john to the sudo group in a single step
-		sudo find /home/ -exec usermod -aG sudo john ;
+		sudo find /home/ -exec usermod -aG sudo john \;
 
 		IMPORTANT: After modifying group membership, the user must disconnect
 		and reconnect via SSH for the new group rights to take effect.
